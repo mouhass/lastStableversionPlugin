@@ -1,0 +1,116 @@
+sylius_paypal_webhook:
+    resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
+Home:
+    path: job/cron/
+    controller: BatchJobs\BatchJobsBundle\Controller\HomeController::index
+login:
+    path: job/cron/login
+    controller: BatchJobs\BatchJobsBundle\Controller\SecurityController::Login
+
+
+app_jobCron_index:
+    path: job/cron/admin/job/cron/
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::index
+    methods:    GET
+app_jobCron_new:
+    path: job/cron/admin/job/cron/new
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::new
+app_JobCron_show:
+    path: job/cron/admin/job/cron/{id}
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::show
+    methods:    GET
+app_JobCron_edit:
+    path: job/cron/admin/job/cron/{id}/edit
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::edit
+app_JobCron_delete:
+    path: job/cron/admin/job/cron/{id}/delete
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::delete
+app_JobCron_execute:
+    path: job/cron/admin/job/cron/{id}/execImme
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::execImm
+app_JobCron_downloadFiles:
+    path: job/cron/admin/job/cron/{id}/{date}/downloadFile
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::download
+    methods:    GET
+app_JobCron_actifdesactif:
+    path: job/cron/admin/job/cron/{id}/actifdesactif
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::actifdesactif
+app_JobCron_nextdate:
+    path: job/cron/admin/job/cron/{id}/nextDate/
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCronController::nextDate
+    methods:    GET
+
+
+app_job_composite_index:
+    path: job/cron/admin/job/composite
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCompositeController::index
+    methods:    GET
+app_job_composite_new:
+    path: job/cron/admin/job/composite/new
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCompositeController::new
+app_job_composite_show:
+    path: job/cron/admin/job/composite/{id}
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCompositeController::show
+    methods:    GET
+app_job_composite_edit:
+    path: job/cron/admin/job/composite/{id}/edit
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCompositeController::edit
+app_job_composite_delete:
+    path: job/cron/admin/job/composite/{id}
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCompositeController::delete
+    methods:    POST
+app_JobComposite_execute:
+    path: job/cron/admin/job/composite/{id}/execImme
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCompositeController::execImm
+app_JobComposite_actifdesactif:
+    path: job/cron/admin/job/composite/{id}/actifdesactif
+    controller: BatchJobs\BatchJobsBundle\Controller\JobCompositeController::actifdesactif
+
+
+
+logout:
+    path: job/cron/logout
+
+
+email:
+    path: job/cron/email
+    controller: BatchJobs\BatchJobsBundle\Controller\MailerController::sendEmail
+
+
+app_historique_index:
+    path: /historique
+    controller: BatchJobs\BatchJobsBundle\Controller\HistoriqueController::index
+    methods:    POST
+app_historique_new:
+    path: /historique/new
+    controller: BatchJobs\BatchJobsBundle\Controller\HistoriqueController::new
+app_historique_show:
+    path: /historique/{id}
+    controller: BatchJobs\BatchJobsBundle\Controller\HistoriqueController::show
+    methods:    POST
+app_historique_edit:
+    path: /historique/{id}/edit
+    controller: BatchJobs\BatchJobsBundle\Controller\HistoriqueController::edit
+app_historique_delete:
+    path: /historique/{id}
+    controller: BatchJobs\BatchJobsBundle\Controller\HistoriqueController::delete
+
+app_default:
+    path: /default
+    controller: BatchJobs\BatchJobsBundle\Controller\DefaultController::index
+
+
+app_admin_index:
+    path: job/cron/admin
+    controller: BatchJobs\BatchJobsBundle\Controller\AdminController::index
+    methods:    GET
+app_admin_new:
+    path: job/cron/admin/new
+    controller: BatchJobs\BatchJobsBundle\Controller\AdminController::new
+
+app_admin_edit:
+    path: job/cron/admin/{id}/edit
+    controller: BatchJobs\BatchJobsBundle\Controller\AdminController::edit
+app_admin_delete:
+    path: job/cron/admin/{id}
+    controller: BatchJobs\BatchJobsBundle\Controller\AdminController::delete
